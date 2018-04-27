@@ -35,6 +35,7 @@
     // Grab the back-facing camera
 	AVCaptureDevice *backFacingCamera = nil;
 	NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+    
 	for (AVCaptureDevice *device in devices) 
 	{
 		if ([device position] == AVCaptureDevicePositionBack)

@@ -9,15 +9,15 @@
 {
     videoFilteringDisplayController = [[VideoFilteringDisplayController alloc] initWithNibName:@"VideoFilteringDisplayController" bundle:nil];
     videoFilteringDisplayController.delegate = self;
-
-    [self presentModalViewController:videoFilteringDisplayController animated:YES];
+    [self presentViewController:videoFilteringDisplayController animated:YES completion:nil];
+    //[self presentModalViewController:videoFilteringDisplayController animated:YES];
 
 }
 
 - (void)finishedTestWithAverageTimesForCPU:(CGFloat)cpuTime coreImage:(CGFloat)coreImageTime gpuImage:(CGFloat)gpuImageTime;
 {
-    [self dismissModalViewControllerAnimated:YES];
-    
+    //[self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     processingTimeForCPURoutine = cpuTime;
     processingTimeForCoreImageRoutine = coreImageTime;
     processingTimeForGPUImageRoutine = gpuImageTime;
